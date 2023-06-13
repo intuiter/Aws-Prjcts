@@ -34,7 +34,7 @@ d) Create a Database Tier is designed such a way that it only allows traffic fro
 <p>&nbsp;</p>
 
 ## Implementation:
-* __Create VPC__- In this step, will create 6 subnets total for our VPC. Two public subnets for Web-facing servers and four private subnets. Two each for application and database tiers. This will be configured across two availability zones to ensure high availability.
+* ___Create VPC___ - In this step, will create 6 subnets total for our VPC. Two public subnets for Web-facing servers and four private subnets. Two each for application and database tiers. This will be configured across two availability zones to ensure high availability.
 Included in VPC will be a NAT Gateway for hosts in the private subnets to ensure they are able to reach out to the internet for updates etc. Public and private route tables will be configured. Internet gateway associated with VPC to allow internet assoaciated to public subnets.
 Navigate to the VPC dashboard in the console and click Create VPC
 <p>&nbsp;</p>
@@ -46,7 +46,7 @@ Navigate to the VPC dashboard in the console and click Create VPC
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/b03d8d34-b9bd-47a2-a83f-1e28d138afc1)
 <p>&nbsp;</p>
 
-* __Create a Web Tier__ - Let’s create an auto-scaling group for web tier with an application load balancer. 
+* ___Create a Web Tier___ - Let’s create an auto-scaling group for web tier with an application load balancer. 
 Navigate to Auto scaling groups and click create.
 
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/803fb038-aa12-4fbc-9ae2-8d94b54a3061)
@@ -117,10 +117,11 @@ Now let’s test by copying the DNS name of our load balancer into a web browser
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/fc6e11f4-3ee8-4b60-a154-7e2b08f4dcbd)
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/1eb21481-9c20-4eae-85f1-c209ba4ba801)
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/773f6f8a-c6b2-4e99-86c7-586ead702be6)
+
 Successfully Web Tier has been created and we can view our frontend server as shown the screenshots.
 <p>&nbsp;</p>
 
-* __Create Application Tier__ - Now we will create the application tier. This will be very similar to our web tier. We will place our Auto Scaling Group in two private subnets to host our EC2 instances.
+* ___Create Application Tier___ - Now we will create the application tier. This will be very similar to our web tier. We will place our Auto Scaling Group in two private subnets to host our EC2 instances.
 Created another ASG as before this time called it Apptier-ASG and select Created launch template. Select the same AMI and instance type as we did for the web tier.
 Created a new security group. This time configure the SG to only allow traffic from our Web-SG.
  
@@ -149,11 +150,13 @@ Complete the wizard using the configuration as we did for the web tier. We now h
 <p>&nbsp;</p>
 
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/7e8a15ea-5b72-492c-a411-e3eee5f6fde5)
+
 Our ping was successfull and we have configured our NSGs correctly. Tier 2 is complete.
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-* __Add Database Tier__ - Now we will add our database. We will be utilizing the free tier option and creating one MySQL DB in one of our AZs.
+
+* ___Add Database Tier___ - Now we will add our database. We will be utilizing the free tier option and creating one MySQL DB in one of our AZs.
 Create a new security group(DB-SG). Select our VPC and create an inbound rule to only allow traffic for TCP port 3306 from our App-SG.
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/d1979e40-5a1f-4b3c-8753-bf3536b40ef7)
 <p>&nbsp;</p>
