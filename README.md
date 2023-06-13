@@ -1,12 +1,12 @@
                                                   Aws Three-Tier Architecture
-<p>&nbsp;</p>
- 
+<p>&nbsp;</p> 
+
 ### Architectural Diagram of Three-tier work flow:
 <p>&nbsp;</p>
 
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/2ad78cbe-9fa6-48e2-bdf0-41fd388d3e5f)
 <p>&nbsp;</p>
-
+ 
 **A Scenario to explain about three-tier architecture functionality,**
 
 # Presentation Tier (Front-end):
