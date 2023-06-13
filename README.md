@@ -1,6 +1,6 @@
                                                   Aws Three-Tier Architecture
 <p>&nbsp;</p>
-
+ 
 ### Architectural Diagram of Three-tier work flow:
 <p>&nbsp;</p>
 
