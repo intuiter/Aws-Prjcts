@@ -54,6 +54,8 @@ Navigate to Auto scaling groups and click create.
 In the new window configured the name of the template and selected a free tier Amazon AMI with a t2.micro instance type then associated a key pair.
 
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/a23e33b1-c4e9-4950-8435-a5096050bd79)
+<p>&nbsp;</p>
+
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/6499e5be-f371-4ee9-9557-58dc3631a7e6)
 <p>&nbsp;</p>
 
@@ -86,6 +88,8 @@ Select Attach to a new load balancer and Internet-facing. Select Create a target
 <p>&nbsp;</p>
 
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/8d997f18-4f36-41ce-9132-f9eae325216a)
+<p>&nbsp;</p>
+
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/784962ac-1440-4f40-a048-075468284d8a)
 <p>&nbsp;</p>
  
@@ -115,7 +119,11 @@ Now let’s test by copying the DNS name of our load balancer into a web browser
 <p>&nbsp;</p>
 
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/fc6e11f4-3ee8-4b60-a154-7e2b08f4dcbd)
+<p>&nbsp;</p>
+
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/1eb21481-9c20-4eae-85f1-c209ba4ba801)
+<p>&nbsp;</p>
+
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/773f6f8a-c6b2-4e99-86c7-586ead702be6)
 
 Successfully Web Tier has been created and we can view our frontend server as shown the screenshots.
@@ -126,14 +134,20 @@ Created another ASG as before this time called it Apptier-ASG and select Created
 Created a new security group. This time configure the SG to only allow traffic from our Web-SG.
  
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/b5d057dd-ac55-4b6e-9431-7d67933cf737)
-![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/22316895-0e9d-41bf-9ae2-f6310a2b45b9)
-![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/152537cc-07e2-4140-94ff-67575783f8e8)
 <p>&nbsp;</p>
+
+![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/22316895-0e9d-41bf-9ae2-f6310a2b45b9)
+<p>&nbsp;</p>
+
+![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/152537cc-07e2-4140-94ff-67575783f8e8)
+
 No need to enable public IP assignment as these instances will remain in our private subnets. We will not add any code to the user data field.
 Now back in our ASG wizard select the launch template we just created and click Next. Select the appropriate VPC and two private subnets.
 <p>&nbsp;</p>
 
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/9cc2655c-74af-4cbc-9022-9674d6296853)
+<p>&nbsp;</p>
+
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/76f23761-f340-4e5b-babd-9462ef500a0b)
 <p>&nbsp;</p>
 Add a new ALB and this time select the Internal for load balancer scheme.
@@ -164,7 +178,11 @@ Create a new security group(DB-SG). Select our VPC and create an inbound rule to
 Within the console navigate to RDS > Databases and select Create database and choose Standard create and MySQL. Choose the Free tier and leave defaults. Fill in the password field.
 
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/3f7c537d-6fb3-4425-ad31-1c420b293f60)
+<p>&nbsp;</p>
+
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/c29bcaca-ae7a-428e-a1fa-cf8bb3b12de9)
+<p>&nbsp;</p>
+
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/8cef452b-dc00-4eb8-b7fc-761df2a4eee3)
 <p>&nbsp;</p>
 
