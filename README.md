@@ -151,8 +151,8 @@ Complete the wizard using the configuration as we did for the web tier. We now h
 
 ![image](https://github.com/intuiter/Aws-Three-Tier-Architecture/assets/135228471/7e8a15ea-5b72-492c-a411-e3eee5f6fde5)
 
-Our ping was successfull and we have configured our NSGs correctly. Tier 2 is complete.
-<p>&nbsp;</p>
+Our ping was successfull and we have configured our NSGs correctly. Tier 2 is complete. In the above result snap we have tried to ping app tier instance with IP(10.0.3.167) which is
+in private subnet from web tier instance IP.
 <p>&nbsp;</p>
 
 
